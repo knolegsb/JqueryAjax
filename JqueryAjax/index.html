@@ -15,9 +15,12 @@
 
     <button class="big">Button 1</button>
     <button class="small">Button 2</button>
-
+    <button class="small">Button 3</button>
     <script type="text/javascript">
-        $(".small").hide();
+        $('.big').click(function () {
+            $(".small").hide();
+        });
+        
     </script>
 </body>
 </html>

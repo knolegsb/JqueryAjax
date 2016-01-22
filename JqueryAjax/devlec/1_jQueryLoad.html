@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Scripts/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+
+    <div id="btn">
+        <div class="btnLoad">HTML Read ON</div>
+    </div>
+
+    <div id="ctlGrid">
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn .btnLoad").click(function () {
+                $('#ctlGrid').load("1_HtmlSamplePage.html");
+                window.alert("This message will be shown first. Why? Because it is async");
+            });
+        });
+    </script>
+</body>
+</html>
