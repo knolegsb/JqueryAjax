@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Scripts/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <input type="button" id="btn" value="Company Intro" />
+    <div id="ctlGrid"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                $.get('4_Company.xml', function (data) {
+                    $('#ctlGrid').empty();
+                    $(data).find('Company').each(function () {
+                        var $entry = $(this);
+                        //console.log(this);
+                        //console.log($(this)[0]);
+                        //console.log($entry.find("CompanyName").text());
+                        //console.log($entry.attr('CompanyType'));
+                        var html = "<div>" + $entry.attr('CompanyType') + "</div>";
+                        html += "<div>" + $entry.find('CompanyName').text() + "</div>";
+                        $('#ctlGrid').append(html);
+                        //console.log(html);
+                        //console.log($(html));
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

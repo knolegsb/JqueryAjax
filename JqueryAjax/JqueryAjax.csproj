@@ -69,6 +69,12 @@
     <Content Include="devlec\1_HtmlSamplePage.html" />
     <Content Include="devlec\1_jQueryLoad.html" />
     <Content Include="devlec\2_jQurygetJSON.html" />
+    <Content Include="devlec\3_jQuerygetScript.html" />
+    <Content Include="devlec\3_jQuerygetScript.js" />
+    <Content Include="devlec\4_Company.xml" />
+    <Content Include="devlec\4_jQueryget.html" />
+    <Content Include="devlec\5_getMethod.html" />
+    <Content Include="devlec\FormResponseData.aspx" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="devlec\jQuerygetJSON.json" />
@@ -87,6 +93,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="devlec\FormResponseData.aspx.cs">
+      <DependentUpon>FormResponseData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="devlec\FormResponseData.aspx.designer.cs">
+      <DependentUpon>FormResponseData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
