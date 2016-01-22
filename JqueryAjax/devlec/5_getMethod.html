@@ -3,8 +3,25 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
+    <script src="../Scripts/jquery-2.1.4.min.js"></script>
 </head>
 <body>
+    <input type="button" id="btn" value="Bring up HTML from server" />
+    <br />
+    <br />
+    <br />
+    <div id="pnlDisplay">output here</div>
 
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                //console.log($(this).val());
+                $.get("FormResponseData.aspx", { 'Msg': $(this).val() }, function (data) {
+                    $('#pnlDisplay').html(data);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
