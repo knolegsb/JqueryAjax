@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../Scripts/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <div id="btn">
+        <div class="btnLoad">HTML Read On</div>
+    </div>
+
+    <div id="pnlDisplay">
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn .btnLoad").click(function () {
+                $.getJSON("jQuerygetJSON.json", function (data) {
+                    $('#pnlDisplay').empty();
+                    var table = "<table border='1'><tr><td>Index</td><td>Number</td><td>Name</td></tr>";
+                    $.each(data, function (index, entry) {
+                        table += '<tr>';
+                        table += '<td>' + index + '</td>';
+                        table += '<td>' + entry["Num"] + '</td>';
+                        if (entry["Name"]) {
+                            table += '<td>' + entry["Name"] + '</td>';
+                        }
+                        table += '</tr>';
+                    });
+                    table += "</table>";
+                    $('#pnlDisplay').append(table);
+                });
+            });            
+        });
+    </script>
+</body>
+</html>

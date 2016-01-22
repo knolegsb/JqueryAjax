@@ -68,8 +68,10 @@
   <ItemGroup>
     <Content Include="devlec\1_HtmlSamplePage.html" />
     <Content Include="devlec\1_jQueryLoad.html" />
+    <Content Include="devlec\2_jQurygetJSON.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="devlec\jQuerygetJSON.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
